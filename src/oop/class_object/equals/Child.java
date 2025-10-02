@@ -1,6 +1,4 @@
-package oop.class_object.equals_and_hashcode;
-
-import java.util.Objects;
+package oop.class_object.equals;
 
 public class Child {
     private String name;
@@ -20,6 +18,7 @@ public class Child {
 
     @Override
     public boolean equals(Object obj) {
+        System.out.println("Started comparison with " + this.getName());
         if(obj == null) {
             return false;
         }
@@ -31,6 +30,6 @@ public class Child {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, year);
+        return this.getYear() % 2;
     }
 }

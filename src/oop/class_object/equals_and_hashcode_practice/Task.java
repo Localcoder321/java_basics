@@ -1,0 +1,20 @@
+package oop.class_object.equals_and_hashcode_practice;
+
+public class Task {
+    static void main() {
+        //Задача
+        //Создать класс пользователь (логин, пароль).
+        //Создать два пользователя:
+        //1 - login: ablazzing, pass: 111111
+        //2 - login: ablazzing, pass: 222222
+        //Сделать так, чтобы хошкоды этих объектов были равны, но equals возвращал false (т.е объекты не равны).
+
+        User user1 = new User("ablazzing", "111111");
+        User user2 = new User("ablazzing", "222222");
+
+        System.out.println(user1.equals(user2));
+        System.out.println(user1.hashCode() == user2.hashCode());
+        System.out.println(user1.hashCode());
+        System.out.println(user2.hashCode());
+    }
+}
